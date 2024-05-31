@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  background: no-repeat url("./images/bg/home-bg.jpg");
+  background-size: cover;
+  color: #d0d6f9;
+  font-weight: 400;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bellefair", serif;
+  color: #fff;
+}
+
+.header-container {
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 65px 0 65px 55px;
+  .line {
+    position: absolute;
+    width: 45%;
+    height: 1px;
+    background: #ffffff3d;
+    top: 115px;
+    left: 190px;
+    z-index: 10;
+  }
+  ul {
+    display: flex;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+    max-width: 830px;
+    width: 100%;
+    justify-content: center;
+    gap: 50px;
+    padding: 40px 0;
+    li {
+      position: relative;
+    }
+    a {
+      display: flex;
+      gap: 11px;
+      p {
+        font-size: 16px;
+        letter-spacing: 2.7px;
+      }
+      b {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 2.7px;
+      }
+    }
+    a:hover::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: #ffffff6b;
+      position: absolute;
+      bottom: -40px;
+    }
+
+    .active::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      position: absolute;
+      bottom: -40px;
+    }
+    .active:hover::after {
+      background: #fff;
+    }
+  }
+}
+.menu-icon {
+  display: none;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  min-height: 65vh;
+  padding: 65px 165px;
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 445px;
+    h2 {
+      font-size: 150px;
+      font-weight: 400;
+    }
+    p {
+      font-size: 28px;
+      letter-spacing: 4.725px;
+    }
+    .p {
+      font-size: 18px;
+      line-height: 32px;
+      font-style: normal;
+      font-weight: 400;
+      display: block;
+    }
+  }
+  .explore-btn {
+    width: 274px;
+    height: 274px;
+    background: #fff;
+    border-radius: 274px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+    p {
+      font-family: "Bellefair", serif;
+      color: #0b0d17;
+      font-size: 32px;
+      letter-spacing: 2px;
+    }
+    &:hover {
+      box-shadow: 0 0 0 120px #ffffff2f;
+    }
+  }
+}
+
+.destination-container {
+  padding: 76px 163px;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    .title-text {
+      display: flex;
+      gap: 28px;
+    }
+    b {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 4.725px;
+      opacity: 0.25;
+    }
+    p {
+      font-size: 28px;
+      letter-spacing: 4.725px;
+      text-transform: uppercase;
+    }
+  }
+  .planet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      padding-left: 152px;
+    }
+    .planet-text {
+      max-width: 445px;
+      h2 {
+        font-size: 100px;
+        font-weight: 400;
+        margin-bottom: 14px;
+        margin-top: 32px;
+      }
+      p {
+        font-size: 18px;
+        font-style: normal;
+        line-height: 32px;
+        padding-bottom: 54px;
+        border-bottom: 1px solid #d0d6f9;
+      }
+    }
+    .planet-information {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 28px;
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 2.362px;
+        padding: 0;
+        border: none;
+      }
+      h2 {
+        font-size: 28px;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+  }
+  .title-tabs {
+    display: flex;
+    gap: 35px;
+    margin-top: 64px;
+    a {
+      position: relative;
+    }
+    a:hover::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: #ffffff6b;
+      position: absolute;
+      bottom: -20px;
+    }
+    .active::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: #fff;
+      position: absolute;
+      bottom: -20px;
+    }
+    .active:hover::after {
+      background: #fff;
+    }
+  }
+  .tabs {
+    display: flex;
+    gap: 10px;
+  }
+  .tab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+  }
+}
+
+.technology-container {
+  padding: 80px 0 165px 165px;
+  .title {
+    display: flex;
+    gap: 28px;
+    b {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 4.725px;
+      opacity: 0.25;
+    }
+    p {
+      font-size: 28px;
+      letter-spacing: 4.725px;
+      text-transform: uppercase;
+    }
+  }
+  .technology-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .technology-content {
+    max-width: 470px;
+  }
+  h2 {
+    font-size: 56px;
+    font-weight: 400;
+    margin-bottom: 17px;
+  }
+  p {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    margin-bottom: 11px;
+  }
+  .desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  .technology-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 32px;
+    font-family: "Bellefair", serif;
+    line-height: 2px;
+    font-weight: 400;
+    background: transparent;
+    border: 1px solid #ffffff2f;
+    color: #fff;
+    cursor: pointer;
+  }
+  .tab--active {
+    color: #0b0d17;
+    background: #fff;
+    border: none;
+  }
+}
+
+.crew-container {
+  padding: 80px 165px 0 165px;
+  .title-text {
+    display: flex;
+    gap: 24px;
+    font-size: 28px;
+    p {
+      font-weight: 400;
+      letter-spacing: 4.8px;
+    }
+    b {
+      opacity: 0.25;
+      font-weight: 700;
+    }
+  }
+  .crew-card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .card-text {
+      max-width: 488px;
+    }
+    .job {
+      font-size: 32px;
+      font-weight: 400;
+      opacity: 0.5;
+      font-family: "Bellefair", serif;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 56px;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 15px 0 27px;
+    }
+    p {
+      color: #d0d6f9;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 32px; /* 177.778% */
+    }
+  }
+  .tabs {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    bottom: -150px;
+    .tab {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(119, 116, 116, 0.103);
+      cursor: pointer;
+    }
+    .tab-list--active {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: none;
+      background: #fff;
+    }
+  }
+}
+
+@media (max-width: 1634px) {
+  .line {
+    display: none;
+  }
+}
+
+@media (max-width: 1150px) {
+  .header-container {
+    padding: 0;
+    img {
+      padding: 24px 40px;
+    }
+    b {
+      display: none;
+    }
+    ul {
+      max-width: 450px;
+      gap: 37px;
+    }
+  }
+  .home-container {
+    padding: 100px 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 150px;
+  }
+  .destination-container {
+    padding: 40px;
+    .title {
+      align-items: center;
+      flex-direction: column;
+    }
+    .planet {
+      margin: 60px auto;
+      flex-direction: column;
+      text-align: center;
+      img {
+        padding: 0;
+      }
+    }
+  }
+  .crew-container {
+    padding: 40px 40px 0;
+    .crew-card-container {
+      flex-direction: column;
+      gap: 90px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .tabs {
+      flex-direction: column;
+    }
+  }
+  .technology-container {
+    padding: 40px 0;
+    .title {
+      padding-left: 40px;
+    }
+    .technology-content-container {
+      margin-top: 60px;
+      flex-direction: column-reverse;
+      gap: 44px;
+      text-align: center;
+    }
+    .technology-tabs {
+      flex-direction: row;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .header-container {
+    ul {
+      display: none;
+    }
+    .menu-icon {
+      display: block;
+    }
+    .menu-mob {
+      position: absolute;
+      min-height: 100vh;
+      right: 0;
+      top: 0;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40.774227142333984px);
+      padding: 35px 30px;
+      z-index: 1000;
+      ul {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent !important;
+        backdrop-filter: none;
+        .active::after {
+          content: "";
+          right: -30px;
+          top: 0;
+          width: 4px;
+          height: 100%;
+        }
+        b {
+          display: block;
+        }
+      }
+    }
+  }
+}
